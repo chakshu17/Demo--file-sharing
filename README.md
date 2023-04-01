@@ -1,4 +1,4 @@
-# Demo--file-sharing
+# File-sharing App
 
 ## For starting Backend
 cd File - backend <br />
@@ -11,6 +11,4 @@ npm i <br />
 npm start <br />
 
 ## Description.
-Upload File with User's Name. 
-Then you'll be able to see the file updated in the table below. 
-Once, you hover over the file name and click it, a new window tab will open the file.
+Upload a file containing the user's name. The file should then be updated in the table below. When you hover over the file name and click it, it will open in a new window tab.
