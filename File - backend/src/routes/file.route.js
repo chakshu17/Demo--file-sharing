@@ -7,10 +7,22 @@ routes.post(`/add-files`, async (req, res) => {
     try {
         const file = await new fileModel(req.body)
         if (!file) {
+           
+            res.status(400).send({
+            message: "Please provide a file!",
+            data: null
+           })
+           
             throw new Error("File not updated")
         }
         const saved = await file.save();
         if (!saved) {
+            
+            res.status(400).send({
+            message: "An Error occured while saving your file!",
+            data: null
+           })
+           
             throw new Error("File not updated")
         }
         res.status(200).send({
@@ -28,6 +40,12 @@ routes.get(`/files`, async (req, res) => {
     try {
         const file = await  fileModel.find()
         if (!file) {
+            
+            res.status(400).send({
+            message: "We could not get the files please try again!",
+            data: null
+           })
+           
             throw new Error("File not found")
         }
 
